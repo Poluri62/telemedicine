@@ -1,0 +1,105 @@
+--PATIENT
+INSERT INTO PATIENT VALUES ('P1001','Aaron Hank','M','1964-07-12','O+','1234 NW Lane, St. Robert, MO','aaronhank@gmail.com','hkanjakkklq');
+INSERT INTO PATIENT VALUES ('P1002','Abagnale Frank','M','1970-05-09','A+','49 Downing Street, LA','abagnalefrank@gmail.com','1233');
+INSERT INTO PATIENT VALUES ('P1003','Abbey Edward','F','1987-12-26','O+','63 Cupertino Road, MA','abbeyedward@gmail.com','djhwdnnm');
+INSERT INTO PATIENT VALUES ('P1004','Abel Reuben','M','1991-07-07','B+','120 W Suncity palace road, TX','abelreuben@gmail.com','hhjjw');
+INSERT INTO PATIENT VALUES ('P1005','Beatrice Francis','F','1993-07-15','O-','55, 481 National Highway, NY','baconfrancis@gmail.com','sdasqq');
+INSERT INTO PATIENT VALUES ('P1006','George Russell','M','1997-08-21','O+','Sundown street, LA','georgerussell@gmail.com','2346gd');
+INSERT INTO PATIENT VALUES ('P1007','Donna Johnson','F','1997-10-10','B+','60, MA high railway road, GA','donnajohn@yahoo.com','9jkde');
+INSERT INTO PATIENT VALUES ('P1008','Pearl Adam','F','1998-01-05','O+','Highway 99, CA','pearladam@gmail.com','Uii20ke');
+
+--PATIENT_CONTACT
+INSERT INTO PATIENT_CONTACT VALUES ('P1001','1234567890');
+INSERT INTO PATIENT_CONTACT VALUES ('P1001','9657899776');
+INSERT INTO PATIENT_CONTACT VALUES ('P1002','2345678901');
+INSERT INTO PATIENT_CONTACT VALUES ('P1003','3456789012');
+INSERT INTO PATIENT_CONTACT VALUES ('P1004','456789123');
+INSERT INTO PATIENT_CONTACT VALUES ('P1004','677854449');
+INSERT INTO PATIENT_CONTACT VALUES ('P1005','4567890123');
+INSERT INTO PATIENT_CONTACT VALUES ('P1006','5678901234');
+INSERT INTO PATIENT_CONTACT VALUES ('P1007','6789012345');
+INSERT INTO PATIENT_CONTACT VALUES ('P1008','7890123456');
+INSERT INTO PATIENT_CONTACT VALUES ('P1008','8974533567');
+
+--PATIENT_REPORT
+INSERT INTO PATIENT_REPORT VALUES ('P1001','PR010','Headaches, Running nose','','Colds and Flu');
+INSERT INTO PATIENT_REPORT VALUES ('P1002','PR053','Itchy eyes','','Conjunctivitis');
+INSERT INTO PATIENT_REPORT VALUES ('P1003','PR013','Stomach Aches, Vomiting','','Diarrhea');
+INSERT INTO PATIENT_REPORT VALUES ('P1004','PR014','Headaches','','Migrain');
+INSERT INTO PATIENT_REPORT VALUES ('P1005','PR011','Stomach Aches','','Mononucleosis');
+INSERT INTO PATIENT_REPORT VALUES ('P1006','PR045','Bad digestion, Stomach ache','','salmonella');
+INSERT INTO PATIENT_REPORT VALUES ('P1007','PR033','Running nose, fever, cold','','Covid-19');
+INSERT INTO PATIENT_REPORT VALUES ('P1008','PR024','Broken limbs','','Fracture');
+
+--DOCTOR
+INSERT INTO DOCTOR VALUES ('D5001','Lisa Dunne','F','Diabetician','10:00 - 14:00','lisa.dunne@gmail.com','UEzEDotat');
+INSERT INTO DOCTOR VALUES ('D5002','Tim Burke','M','Physician','10:00 - 14:00','tim.burke@gmail.com','xW6hBnFn4Szb');
+INSERT INTO DOCTOR VALUES ('D5003','Anees Rizwan','M','Paediatrician','17:00 - 21:00','anees.rizwan@gmail.com','wWeR9VZsNZG8');
+INSERT INTO DOCTOR VALUES ('D5004','Robert Pike','M','Neurologist','10:00 - 14:00','robert@gmail.com','DUTnI6XIDk');
+INSERT INTO DOCTOR VALUES ('D5005','Suneet Singh','M','Dermatologist','17:00 - 21:00','suneet.singh@gmail.com','V8ZKtmBO7');
+INSERT INTO DOCTOR VALUES ('D5006','Hannah White','F','Gynaecologist','10:00 - 14:00','hannah.white@gmail.com','HD2RXC');
+INSERT INTO DOCTOR VALUES ('D5007','John Wick','M','Physician','17:00 - 21:00','john.wick@gmail.com','iygbRXC');
+
+--DOCTOR_CONTACT
+INSERT INTO DOCTOR_CONTACT VALUES ('D5001','4445651111');
+INSERT INTO DOCTOR_CONTACT VALUES ('D5001','7869875754');
+INSERT INTO DOCTOR_CONTACT VALUES ('D5002','2417674711');
+INSERT INTO DOCTOR_CONTACT VALUES ('D5003','4446668323');
+INSERT INTO DOCTOR_CONTACT VALUES ('D5003','6692871276');
+INSERT INTO DOCTOR_CONTACT VALUES ('D5004','3981009009');
+INSERT INTO DOCTOR_CONTACT VALUES ('D5005','6408438655');
+INSERT INTO DOCTOR_CONTACT VALUES ('D5005','6753556577');
+INSERT INTO DOCTOR_CONTACT VALUES ('D5006','7614081148');
+
+--SERVICES
+INSERT INTO SERVICES VALUES ('S2001','General Illness','Consult patients with headaches, running nose, fevers');
+INSERT INTO SERVICES VALUES ('S2002','Nervous system','Consult patients with issues related to brain and/or nervous system');
+INSERT INTO SERVICES VALUES ('S2003','Dermatology','Consultation for issues related to skin, nails and/or hair');
+INSERT INTO SERVICES VALUES ('S2004','Obstetrics and Gynecology','Treatment of women\'s diseases, especially those of the reproductive organs');
+INSERT INTO SERVICES VALUES ('S2005','Diabetes','Consultation and treatment for Diabetes');
+INSERT INTO SERVICES VALUES ('S2006','Dietician','Consultation and treatment for diet related issues');
+
+--SERVICE_DOCTOR_DETAILS
+INSERT INTO SERVICE_DOCTOR_DETAILS VALUES ('S2001','D5002',45,'10:00 - 14:00');
+INSERT INTO SERVICE_DOCTOR_DETAILS VALUES ('S2001','D5007',39,'17:00 - 21:00');
+INSERT INTO SERVICE_DOCTOR_DETAILS VALUES ('S2002','D5004',350,'10:00 - 14:00');
+INSERT INTO SERVICE_DOCTOR_DETAILS VALUES ('S2003','D5002',50,'17:00 - 20:00');
+INSERT INTO SERVICE_DOCTOR_DETAILS VALUES ('S2004','D5006',60,'10:00 - 12:00');
+INSERT INTO SERVICE_DOCTOR_DETAILS VALUES ('S2006','D5003',75,'17:00 - 21:00');
+
+--APPOINTMENT_DETAILS
+INSERT INTO APPOINTMENT_DETAILS VALUES ('A8001','S2001','P1007','D5002','2022-07-26','11:00:00','OLD');
+INSERT INTO APPOINTMENT_DETAILS VALUES ('A8002','S2002','P1004','D5004','2022-08-15','12:45:00','OLD');
+INSERT INTO APPOINTMENT_DETAILS VALUES ('A8003','S2001','P1001','D5007','2022-10-09','18:30:00','ACTIVE');
+INSERT INTO APPOINTMENT_DETAILS VALUES ('A8004','S2006','P1006','D5003','2022-10-09','20:15:00','ACTIVE');
+
+--PAYMENT
+INSERT INTO PAYMENT VALUES ('T9001','A8001',45,'2022-07-24','12:00:00','PROCESSED','CREDIT CARD');
+INSERT INTO PAYMENT VALUES ('T9002','A8002',360,'2022-08-13','10:03:40','NOT PROCESSED','CREDIT CARD');
+INSERT INTO PAYMENT VALUES ('T9003','A8003',42,'2022-10-09','17:45:20','PROCESSED','CASH');
+INSERT INTO PAYMENT VALUES ('T9004','A8004',80,'2022-10-07','09:13:33','PROCESSED','CREDIT CARD');
+
+--RESCHEDULE
+INSERT INTO RESCHEDULE VALUES ('A8001','D5002','2022-10-29','10:15:00');
+INSERT INTO RESCHEDULE VALUES ('A8004','D5003','2022-10-10','18:00:00');
+
+--REPRESENTATIVE
+INSERT INTO REPRESENTATIVE VALUES ('R0001','P1001','Neil Patrick','Hospital Representative','212 Baker Street, TX','8236452947','neil.patrick@gmail.com','uruguay23');
+INSERT INTO REPRESENTATIVE VALUES ('R0002','P1002','Hanna Luis','Daughter','49 Downing Street, LA','8236762947','hanna.luis@gmail.com','ajksydgfiak');
+INSERT INTO REPRESENTATIVE VALUES ('R0003','P1003','Mathew Perry','Husband','63 Cupertino Road, MA','8236762945','mat.perry@gmail.com','sdvasdv');
+INSERT INTO REPRESENTATIVE VALUES ('R0004','P1004','Jerry Carlton','Brother','78 Saint City Road, NY','7623762947','jerry.carlton@gmail.com','asdcsdv');
+INSERT INTO REPRESENTATIVE VALUES ('R0005','P1008','Ibiza Harris','Hospital Representative','89 Frankford Road, TX','9746362947','ibiza.harris@gmail.com','asdca');
+INSERT INTO REPRESENTATIVE VALUES ('R0001','P1005','Neil Patrick','Hospital Representative','212 Baker Street, TX','8236452947','neil.patrick@gmail.com','uruguay23');
+INSERT INTO REPRESENTATIVE VALUES ('R0006','P1006','Agatha Christie','Mother','Sundown street, LA','6546362947','agatha.christie@gmail.com','erdcadc');
+INSERT INTO REPRESENTATIVE VALUES ('R0005','P1007','Ibiza Harris','Hospital Representative','89 Frankford Road, TX','9746362947','ibiza.harris@gmail.com','asdca');
+
+--BILLING
+INSERT INTO BILLING VALUES ('B4001','T9001','P1007','R0005');
+INSERT INTO BILLING VALUES ('B4002','T9003','P1001','R0001');
+INSERT INTO BILLING VALUES ('B4003','T9004','P1006','R0006');
+
+--SYSTEM_ADMIN
+INSERT INTO SYSTEM_ADMIN VALUES ('Z0001','Georgina Rodregez','georginarodregez@gmail.com','yedw992ej');
+INSERT INTO SYSTEM_ADMIN VALUES ('Z0002','Sunil Sharma','sunil.shara@gmail.com','7549ntgh');
+INSERT INTO SYSTEM_ADMIN VALUES ('Z0003','Mamta Nume','mamata@gmail.com','djkeou224');
+INSERT INTO SYSTEM_ADMIN VALUES ('Z0004','John Rick','johnnny@gmail.com','jehfkj992');
