@@ -1,13 +1,13 @@
 package com.dbms.telemedicine.model.CompositeKeys;
 
-public class PatientContactId {
+public class PatientContactPK {
     private String patientId;
     private String phoneNumber;
 
-    public PatientContactId() {
+    public PatientContactPK() {
     }
 
-    public PatientContactId(String patientId, String phoneNumber) {
+    public PatientContactPK(String patientId, String phoneNumber) {
         this.patientId = patientId;
         this.phoneNumber = phoneNumber;
     }

@@ -1,6 +1,6 @@
 package com.dbms.telemedicine.controller;
 
-import com.dbms.telemedicine.model.CompositeKeys.PatientContactId;
+import com.dbms.telemedicine.model.CompositeKeys.PatientContactPK;
 import com.dbms.telemedicine.model.PatientContact;
 import com.dbms.telemedicine.repository.PatientContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +50,7 @@ public class PatientContactController {
     @ResponseBody
     public ResponseEntity deletePatientById(@PathVariable String patientId, @PathVariable String phoneNumber){
         try{
-            patientContactRepository.deleteById(new PatientContactId(patientId, phoneNumber));
+            patientContactRepository.deleteById(new PatientContactPK(patientId, phoneNumber));
         } catch (Exception e){
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Delete Failed");
