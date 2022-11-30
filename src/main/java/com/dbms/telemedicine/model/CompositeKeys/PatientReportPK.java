@@ -7,9 +7,9 @@ public class PatientReportPK {
     public PatientReportPK() {
     }
 
-    public PatientReportPK(String patientId, String phoneNumber) {
+    public PatientReportPK(String patientId, String patientReportId) {
         this.patientId = patientId;
-        this.patientReportId = phoneNumber;
+        this.patientReportId = patientReportId;
     }
 
     public String getPatientId() {

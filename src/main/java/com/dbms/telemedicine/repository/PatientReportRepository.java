@@ -11,5 +11,5 @@ import java.util.List;
 @Repository
 public interface PatientReportRepository extends CrudRepository<PatientReport, PatientReportPK>{
     List<PatientReport> getAllByPatientId(String patientId);
-    void deleteByPatientIdAndPatientReportId();
+    void deleteByPatientIdAndPatientReportId(String patientId, String patientReportId);
 }

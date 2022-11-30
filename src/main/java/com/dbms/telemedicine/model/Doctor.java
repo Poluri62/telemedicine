@@ -14,26 +14,23 @@ import java.sql.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Patient")
-public class Patient {
+@Table(name = "Doctor")
+public class Doctor {
     @Id
-    @Column(name = "patient_id")
-    String patientId;
+    @Column(name = "doctor_id")
+    String doctorId;
 
-    @Column(name = "patient_name")
-    String patientName;
+    @Column(name = "doctor_name")
+    String doctorName;
 
     @Column(name = "gender")
     String gender;
 
-    @Column(name = "date_of_birth")
-    Date dateOfBirth;
+    @Column(name = "specialization")
+    String specialization;
 
-    @Column(name = "blood_group")
-    String bloodGroup;
-
-    @Column(name = "address")
-    String address;
+    @Column(name = "working_hours")
+    String workingHours;
 
     @Column(name = "email_id")
     String emailId;
