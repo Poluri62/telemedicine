@@ -62,14 +62,14 @@ CREATE TABLE SERVICE_DOCTOR_DETAILS (
 );
 
 CREATE TABLE APPOINTMENT_DETAILS (
-	apointment_id       VARCHAR(5) NOT NULL,
+	appointment_id       VARCHAR(5) NOT NULL,
     service_id          VARCHAR(5) NOT NULL,
     patient_id          VARCHAR(5) NOT NULL,
     doctor_id           VARCHAR(5) NOT NULL,
     appointment_date    DATE NOT NULL,
     appointment_time    TIME NOT NULL,
     appointment_status	VARCHAR(45) NOT NULL,
-    PRIMARY KEY(apointment_id, service_id, patient_id, doctor_id),
+    PRIMARY KEY(appointment_id, service_id, patient_id, doctor_id),
     FOREIGN KEY (service_id) REFERENCES SERVICES(service_id),
     FOREIGN KEY (patient_id) REFERENCES PATIENT(patient_id),
     FOREIGN KEY (doctor_id) REFERENCES DOCTOR(doctor_id)
@@ -77,23 +77,23 @@ CREATE TABLE APPOINTMENT_DETAILS (
 
 CREATE TABLE PAYMENT (
 	payment_id 		VARCHAR(5) NOT NULL,
-	apointment_id 	VARCHAR(5) NOT NULL,
+	appointment_id 	VARCHAR(5) NOT NULL,
     amount 			INTEGER(6) NOT NULL,
     payment_date 	DATE NOT NULL,
     payment_time 	TIME NOT NULL,
     payment_status 	VARCHAR(45) NOT NULL,
     payment_mode 	VARCHAR(45) NOT NULL,
-    PRIMARY KEY(payment_id, apointment_id),
-    FOREIGN KEY (apointment_id) REFERENCES APPOINTMENT_DETAILS(apointment_id)
+    PRIMARY KEY(payment_id, appointment_id),
+    FOREIGN KEY (appointment_id) REFERENCES APPOINTMENT_DETAILS(appointment_id)
 );
 
 CREATE TABLE RESCHEDULE (
-	apointment_id 	VARCHAR(5) NOT NULL,
+	appointment_id 	VARCHAR(5) NOT NULL,
     doctor_id 		VARCHAR(5) NOT NULL,
     new_date 		DATE NOT NULL,
     new_time 		TIME NOT NULL,
-    PRIMARY KEY(apointment_id, doctor_id),
-    FOREIGN KEY (apointment_id) REFERENCES APPOINTMENT_DETAILS(apointment_id),
+    PRIMARY KEY(appointment_id, doctor_id),
+    FOREIGN KEY (appointment_id) REFERENCES APPOINTMENT_DETAILS(appointment_id),
     FOREIGN KEY (doctor_id) REFERENCES DOCTOR(doctor_id)
 );
 
